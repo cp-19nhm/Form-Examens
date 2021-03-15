@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Formulaire</title>
+    <!--- JQuerry  -->
+    <script
+            src="https://code.jquery.com/jquery-1.12.3.js"
+            integrity="sha256-1XMpEtA4eKXNNpXcJ1pmMPs8JV+nwLdEqwiJeCQEkyc="
+            crossorigin="anonymous">
+    </script>
+
+    <!--- JQuery validate -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.2/dist/jquery.validate.js"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+            crossorigin="anonymous"></script>
+    <!-- Our script -->
+    <script src="./js/inscription.js"></script>
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<form id="inscription_form" action="check.php" method="post">
+    <!-- Ligne 1-->
+    <table class="table">
+        <thead>
+            <tr class="success">
+                <th scope="col" >Date</th>
+                <th scope="col">Activite</th>
+                <th scope="col">Lieu</th>
+                <th scope="col">Début</th>
+                <th scope="col">Fin</th>
+                <th scope="col">Km</th>
+                <th scope="col">Tr.Publics</th>
+                <th scope="col">Héberg.</th>
+                <th scope="col">Tél.</th>
+                <th scope="col">Action</th>
+            </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td> <input class="form-control text-center" type="text" name="text" id="Date" placeholder="DD-MM-YYYY"></td>
+            <td> <input class="form-control text-center" type="text" name="activite" id="Activity"></td>
+            <td> <input class="form-control text-center" type="text" name="lieu" id="Lieu"></td>
+            <td> <input class="form-control text-center" type="time" name="debut" id="debutime"></td>
+            <td> <input class="form-control text-center" type="time" name="fin" id="fintime"></td>
+            <td>
+                <div id="fav_button">
+                    <input class="form-control text-center" type="number" name="km" id="km">
+                </div>
+            </td>
+            <td>
+                <input class="form-control text-center" type="text" name="trs_public" id="transport">
+            </td>
+            <td><input class="form-control text-center" type="text" name="accommodation" id="accommodation"></td>
+            <td><input class="form-control text-center" type="number" name="telephone" id="tel"></td>
+            <td>
+                <button type="button" class="btn-primary">
+                <span class="glyphicon glyphicon-plus-sign text-center" id="btn-new"></span>
+            </button>
+
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    <hr>
+    <!-- Ligne 2-->
+    <table class="table" id="new">
+    </table>
+</form>
+</body>
+</html>

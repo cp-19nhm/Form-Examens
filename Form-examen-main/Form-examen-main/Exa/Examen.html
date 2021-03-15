@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Examen</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+          integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!-- SCRIPT -->
+    <script
+            src="https://code.jquery.com/jquery-1.12.3.js"
+            integrity="sha256-1XMpEtA4eKXNNpXcJ1pmMPs8JV+nwLdEqwiJeCQEkyc="
+            crossorigin="anonymous">
+    </script>
+    <!-- Latest compiled and manified JS -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+            crossorigin="anonymous"></script>
+    <!-- Validate -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.2/dist/jquery.validate.js"></script>
+
+    <!-- Own files css and js-->
+    <script src="./JS/candidat.js"></script>
+    <script src="./JS/entreprise.js"></script>
+    <script src="./JS/profession.js"></script>
+    <script src="./JS/examen.js"></script>
+    <script src="./JS/rules.js"></script>
+    <link rel="stylesheet" href="./CSS/examen.css">
+
+</head>
+<body>
+<div class="container">
+    <form id="inscription_form" action="" method="post">
+        <!-- Entête -->
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                Inscription examen CFC
+            </div>
+        </div>
+
+        <!-- Contenu -->
+        <div class="panel panel-body">
+
+            <!-- Content candidat -->
+            <div>
+                <h3>Candidat</h3>
+                <!-- Adress Nr / N° candidat -->
+                <div class="form-group row">
+                    <!-- Adress. -Nr -->
+                    <label for="adress_per" class="col-xs-2 col-form-label">Adress. -Nr :</label>
+                    <div class="col-xs-4">
+                        <input type="text" class="form-control" id="adress_per" name="adress_per"
+                               placeholder="Adress. -Nr">
+                    </div>
+                    <!-- N° Candidat -->
+                    <label for="candidatNum" class="col-xs-2 col-form-label">N° Candidat :</label>
+                    <div class="col-xs-4">
+                        <input type="text" class="form-control" id="candidatNum" name="candidatNum" placeholder="N°">
+                    </div>
+                </div>
+
+                <!-- Civilité -->
+                <div class="form-group row">
+                    <label for="civil_per" class="col-xs-2 col-form-label">Civilité :</label>
+                    <div class="col-xs-2">
+                        <select name="civil" id="civil_per" class="form-control">
+                            <option value="mr">Monsieur</option>
+                            <option value="mds">Madame</option>
+                            <option value="nb">Non spécifié</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Nom -->
+                <div class="form-group row">
+                    <label for="nom_per" class="col-xs-2 col-form-label">Nom :</label>
+                    <div class="col-xs-4">
+                        <input type="text" class="form-control" id="nom_per" name="nom_per" placeholder="Nom">
+                    </div>
+                </div>
+                <!-- prénom -->
+                <div class="form-group row">
+                    <label for="prenom_per" class="col-xs-2 col-form-label">Prénom :</label>
+                    <div class="col-xs-4">
+                        <input type="text" class="form-control" id="prenom_per" name="prenom_per" placeholder="Prénom">
+                    </div>
+                </div>
+
+                <!-- Rue / N°-->
+                <div class="form-group row">
+                    <!-- Rue -->
+                    <label for="rue_per" class="col-xs-2 col-form-label">Rue :</label>
+                    <div class="col-xs-4">
+                        <input type="text" class="form-control" id="rue_per" name="rue_per" placeholder="Rue">
+                    </div>
+                    <!-- N° -->
+                    <label for="norue_per" class="col-xs-2 col-form-label">N° :</label>
+                    <div class="col-xs-4">
+                        <input type="number" class="form-control" id="norue_per" name="norue_per" placeholder="N° rue">
+                    </div>
+                </div>
+
+                <!-- NPA / Lieu -->
+                <div class="form-group row">
+                    <!-- NPA -->
+                    <label for="npa_per" class="col-xs-2 col-form-label">NPA :</label>
+                    <div class="col-xs-4">
+                        <input type="text" class="form-control" id="npa_per" name="npa_per" placeholder="NPA">
+                    </div>
+                    <!-- Lieu -->
+                    <label for="lieu_per" class="col-xs-2 col-form-label">Lieu :</label>
+                    <div class="col-xs-4">
+                        <input type="text" class="form-control" id="lieu_per" name="lieu_per" placeholder="Lieu">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contenr Entreprise et profession -->
+            <div class="from-group row">
+
+                <!-- Content Entreprise -->
+                <div class="col-xs-6">
+                    <h3>Entreprise</h3>
+                    <!-- Modal -->
+
+                    <!-- Entreprise -->
+                    <div class="form-group row">
+                        <label class="col-xs-4 col-form-label" for="selectEnterprise">Entreprise :</label>
+                        <div class="col-xs-8 select-outline">
+                            <!--<input type="radio" id="radion_entr">-->
+                            <select class="form-control " id="selectEnterprise">
+                                <option class="entreprise" disabled selected>- Choisir une option -</option>
+                                <option class="entreprise">Ceff industrie</option>
+                                <option class="entreprise">Ceff santé</option>
+                            </select>
+                        </div>
+
+                        <div class="col-xs-12"><label> </label></div>
+                        <label class="col-xs-4 col-form-label" for="idNewEnter">Nouvelle entreprise</label>
+                        <div class="col-xs-5">
+                            <input type="radio" class="newEnterprise" id="idNewEnter" name="radioBtn">
+                        </div>
+                    </div>
+
+                    <!-- Entreprise item si new entreprise -->
+                    <div class="hidden_item1">
+                        <!-- Nom Entreprise 1-->
+                        <div class="form-group row">
+                            <label for="nomEntreprise1" class="col-sm-4 col-form-label">Nom entrprise :</label>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control" id="nomEntreprise1" name="nomEntreprise1"
+                                       placeholder="Nom de l'entreprise">
+                            </div>
+                        </div>
+
+                        <!-- Nom Entreprise 2 -->
+                        <div class="form-group row">
+                            <label for="nomEntreprise2" class="col-sm-4 col-form-label">Nom 2 entreprise :</label>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control" id="nomEntreprise2" name="nomEntreprise2"
+                                       placeholder="2nd nom de l'entreprise">
+                            </div>
+                        </div>
+
+                        <!-- Rue -->
+                        <div class="form-group row">
+                            <label for="rue" class="col-sm-4 col-form-label">Rue :</label>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control" id="rue" name="rue"
+                                       placeholder="Rue de l'entreprise">
+                            </div>
+                        </div>
+
+                        <!-- N° -->
+                        <div class="form-group row">
+                            <label for="num" class="col-sm-4 col-form-label">N° :</label>
+                            <div class="col-sm-8">
+                                <input type="number" class="form-control" id="num" name="num" placeholder="N° de rue">
+                            </div>
+                        </div>
+
+                        <!-- NPA -->
+                        <div class="form-group row">
+                            <label for="NPAEntreprise" class="col-sm-4 col-form-label">NPA entreprise :</label>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control" id="NPAEntreprise" name="NPAEntreprise"
+                                       placeholder="NPA de l'entreprise">
+                            </div>
+                        </div>
+
+                        <!-- Lieu Entreprise -->
+                        <div class="form-group row">
+                            <label for="LieuEntreprise" class="col-sm-4 col-form-label">Lieu entreprise :</label>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control" id="LieuEntreprise" name="LieuEntreprise"
+                                       placeholder="Lieu de l'entreprise">
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Entreprise item si entreprise exitante -->
+                    <div class="existing">
+                        <!-- Nom Entreprise 1-->
+                        <div class="form-group row">
+                            <label for="existEntre" class="col-xs-4 col-form-label">Nom entrprise :</label>
+                            <div class="col-xs-8">
+                                <input type="text" class="form-control" id="existEntre" name="existEntre" readonly>
+                            </div>
+                        </div>
+
+                        <!-- Nom Entreprise 2 -->
+                        <div class="form-group row">
+                            <label for="existEntre2" class="col-xs-4 col-form-label">Nom 2 entreprise :</label>
+                            <div class="col-xs-8">
+                                <input type="text" class="form-control" id="existEntre2" name="exitEntre2"
+                                       placeholder="2nd nom de l'entreprise" readonly>
+                            </div>
+                        </div>
+
+                        <!-- Rue -->
+                        <div class="form-group row">
+                            <label for="existRue" class="col-xs-4 col-form-label">Rue :</label>
+                            <div class="col-xs-8">
+                                <input type="text" class="form-control" id="existRue" name="exitRue"
+                                       placeholder="Rue de l'entreprise" readonly>
+                            </div>
+                        </div>
+
+                        <!-- N° -->
+                        <div class="form-group row">
+                            <label for="existNum" class="col-xs-4 col-form-label">N° :</label>
+                            <div class="col-xs-8">
+                                <input type="number" class="form-control" id="existNum" name="exsitNum"
+                                       placeholder="N° de rue" readonly>
+                            </div>
+                        </div>
+
+                        <!-- NPA -->
+                        <div class="form-group row">
+                            <label for="NPAEntreprise" class="col-xs-4 col-form-label">NPA entreprise :</label>
+                            <div class="col-xs-8">
+                                <input type="text" class="form-control" id="existNpa" name="NPAEntreprise"
+                                       placeholder="NPA de l'entreprise" readonly>
+                            </div>
+                        </div>
+
+                        <!-- Lieu Entreprise -->
+                        <div class="form-group row">
+                            <label for="existLieu" class="col-xs-4 col-form-label">Lieu entreprise :</label>
+                            <div class="col-xs-8">
+                                <input type="text" class="form-control" id="existLieu" name="existLieu"
+                                       placeholder="Lieu de l'entreprise" readonly>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Content profession -->
+                <div class="col-xs-6">
+                    <h3>Profession</h3>
+                    <!--MODALE-->
+                    <div id="myModal1" class="modal fade" role="dialog">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-body">
+                                    <div class="panel panel-primary">
+                                        <div class="panel-heading">Information de la profession</div>
+                                        <div class="panel-body">
+
+                                            <!-- Nom profession -->
+                                            <div class="form-group row">
+                                                <label for="prof_name_mod" class="col-xs-3">Profession :</label>
+                                                <div class="col-xs-5">
+                                                    <input type="text" class="form-control" id="prof_name_mod"
+                                                           name="prof_name_mod" placeholder="Nom de la profession">
+                                                </div>
+                                            </div>
+
+                                            <!-- Prof.N°OFFT -->
+                                            <div class="form-group row">
+                                                <label for="prof_num_mod" class="col-xs-3">Prof.N°OFFT</label>
+                                                <div class="col-xs-5">
+                                                    <input type="number" class="form-control" id="prof_num_mod"
+                                                           name="prof_num_mod" placeholder="Numéro de la profession">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Profession FR -->
+                    <div class="form-group row">
+                        <label for="profession_liste" class="col-xs-2 col-form-label"> Profession FR</label>
+                        <div class="col-xs-10">
+                            <select class="form-control" id="profession_liste" name="select_prof">
+                                <option value="" disabled selected>- Choisir une option -</option>
+                                <option class="job">Informaticien</option>
+                                <option class="job">Electronicien</option>
+                                <option class="job" id="other">Autre</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Nom profession / N° OFFT -->
+                    <div class="form-group row hidden_item2">
+                        <!-- Nom profession -->
+                        <label class="col-xs-3">Profession :</label>
+                        <div class="col-xs-3">
+                            <input type="text" class="form-control" id="prof_name" readonly name="prof_name"
+                                   placeholder="">
+                        </div>
+
+                        <!-- N° profession OFFT -->
+                        <label class="col-xs-3">Prof.N°OFFT : </label>
+                        <div class="col-xs-3">
+                            <input type="text" class="form-control" id="prof_num" readonly name="prof_num"
+                                   placeholder="">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <!-- Content examen -->
+            <div class="col-form group">
+                <h3>Examen</h3>
+                <div class="form-line row">
+                    <label for="final_per" class="form-check-input col-xs-2">Final :</label>
+                    <div class="col-xs-3">
+                        <input type="checkbox" class="form-check-input" id="final_per" name="checkbox[]">
+                    </div>
+                </div>
+
+                <!-- Checkbox partiel -->
+                <div class="form-line row">
+                    <label for="partiel_per" class="form-check-input col-xs-2">Partiel :</label>
+                    <div class="col-xs-3">
+                        <input type="checkbox" class="form-check-input" id="partiel_per" name="checkbox[]">
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+        <!-- Footer -->
+        <div class="panel panel-footer">
+            <!-- Submit and reset -->
+            <div class="form-group row">
+                <div class="col-xs-7"></div>
+                <div class="col-xs-2">
+                    <input type="submit" class="form-control btn btn-primary submit" id="submit" value="Valider">
+                </div>
+                <div class="col-xs-2">
+                    <input type="reset" class="form-control btn btn-warning" id="reset" value="Annuler">
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+</body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name = "viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Examen</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+
+    <link rel="stylesheet" href="./css.css">
+
+    <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.17.0/dist/jquery.validate.js"></script>
+
+    <script src="js/candidat.js"> </script>
+
+
+
+</head>
+    <body>
+        <div class="container">
+            <!-- Entête -->
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    Inscription examen CFC
+                </div>
+            </div>
+
+            <!-- Contenu -->
+            <div class="panel panel-body">
+                <form id="inscription_form" action="" method="post">
+                    <h3>Candidat</h3>
+                    <div class="form-group row">
+                        <!-- Adress. -Nr -->
+                        <label for="adress_per" class="col-xs-2 col-form-label">Adress. -Nr :</label>
+                        <div class="col-xs-3">
+                            <input type="number" class="form-control" id="adress_per" name="adress_per" placeholder="Adress. -Nr">
+                        </div>
+                        <!-- N° Candidat -->
+                        <label for="nocandiat_per" class="col-xs-2 col-form-label">N° Candidat :</label>
+                        <div class="col-xs-3">
+                            <input type="number" class="form-control" id="nocandiat_per" name="adress_per" placeholder="N°">
+                        </div>
+                    </div>
+
+                    <!-- Civilité -->
+                    <div class="form-group row">
+                        <label for="civil_per" class="col-xs-2 col-form-label">Civilité :</label>
+                        <div class="col-xs-10">
+                            <select name="civil" id="civil_per">
+                                <option value="mr">Monsieur</option>
+                                <option value="mds">Madame</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Nom -->
+                    <div class="form-group row">
+                        <label for="nom_per" class="col-xs-2 col-form-label">Nom :</label>
+                        <div class="col-xs-3">
+                            <input type="text" class="form-control" id="nom_per" name="nom_per" placeholder="Nom">
+                        </div>
+                    </div>
+                    <!-- prénom -->
+                    <div class="form-group row">
+                        <label for="prenom_per" class="col-xs-2 col-form-label">Prénom :</label>
+                        <div class="col-xs-3">
+                            <input type="text" class="form-control" id="prenom_per" name="prenom_per" placeholder="Prénom">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <!-- Rue -->
+                        <label for="rue_per" class="col-xs-2 col-form-label">Rue :</label>
+                        <div class="col-xs-3">
+                            <input type="text" class="form-control" id="rue_per" name="rue_per" placeholder="Rue">
+                        </div>
+                        <!-- N° -->
+                        <label for="norue_per" class="col-xs-2 col-form-label">N° :</label>
+                        <div class="col-xs-3">
+                            <input type="number" class="form-control" id="norue_per" name="norue_per" placeholder="N° rue">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <!-- NPA -->
+                        <label for="npa_per" class="col-xs-2 col-form-label">NPA :</label>
+                        <div class="col-xs-3">
+                            <input type="text" class="form-control" id="npa_per" name="npa_per" placeholder="NPA">
+                        </div>
+                        <!-- Lieu -->
+                        <label for="lieu_per" class="col-xs-2 col-form-label">Lieu :</label>
+                        <div class="col-xs-3">
+                            <input type="text" class="form-control" id="lieu_per" name="lieu_per" placeholder="Lieu">
+                        </div>
+                    </div>
+                    <h3>Entreprise</h3>
+                    <h3>Profession</h3>
+                    <h3>Examen</h3>
+
+                    <!-- Checkbox final -->
+                    <div class="form-line row">
+                        <label for="final_per" class="form-check-input col-xs-2">Final :</label>
+                        <div class="col-xs-3">
+                            <input type="checkbox" class="form-check-input" id="final_per" name="test">
+                        </div>
+                    </div>
+
+                    <!-- Checkbox partiel -->
+                    <div class="form-line row">
+                        <label for="partiel_per" class="form-check-input col-xs-2">Partiel :</label>
+                        <div class="col-xs-3">
+                            <input type="checkbox" class="form-check-input" id="partiel_per" name="test">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>
